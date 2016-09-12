@@ -1,0 +1,2 @@
+- builder: swagger
+  swagger_root_dir: docs

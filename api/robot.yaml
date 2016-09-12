@@ -1,0 +1,84 @@
+swagger: "2.0"
+host: "localhost:8887"
+info:
+  description: |
+    This is a REST API specification of a robot.
+  version: "0.0.1"
+  title: Robot API
+basePath: /robot
+schemes:
+  - http
+paths:
+  /core/wifi/access_point:
+    get:
+      summary: Access point information
+      tags:
+        - network
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: "#/definitions/networking_msgs_AccessPoint"
+
+definitions:
+
+  networking_msgs_AccessPoint:
+    type: object
+    description:
+      Robots Accesspoint information
+    required:
+      - header
+      - Network
+    properties:
+      header:
+        $ref: "#/definitions/std_msgs_Header"
+      Network:
+        $ref: "#/definitions/networking_msgs_Network"
+
+  networking_msgs_Network:
+    type: object
+    description:
+      Robot's network information <br>
+    required:
+      - ssid
+      - band
+      - strength
+    properties:
+      ssid:
+        type: string
+        description: |
+          string NOT_CONNECTED = not_connected<br/>
+      rssi:
+        type: integer
+        format: int32
+      bssid:
+        type: string
+      band:
+        type: string
+      strength:
+        type: integer
+        format: int32
+      ipaddress:
+        type: string
+
+  std_msgs_Header:
+    type: object
+    description: ROS message header
+    properties:
+      seq:
+        type: integer
+        format: int32
+      stamp:
+        $ref: "#/definitions/std_msgs_Time"
+      frame_id:
+        type: string
+
+  std_msgs_Time:
+    type: object
+    properties:
+      secs:
+        type: integer
+        format: int64
+      nsecs:
+        type: integer
+        format: int64

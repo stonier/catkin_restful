@@ -1,0 +1,19 @@
+<package format="2">
+  <name>gopher_robot_restful</name>
+  <version>0.2.0</version>
+  <description>Restful API Specification for a gopher robot or simulation.</description>
+  <maintainer email="stonier@yujinrobot.com">Daniel Stonier</maintainer>
+  <license>MIT</license>
+  <url type="website">http://docs.robotconcert.org/api/robot/gopher</url>
+  <url type="repository">https://bitbucket.org/yujinrobot/gopher_robot_restful</url>
+  <url type="bugtracker">https://bitbucket.org/yujinrobot/gopher_robot_restful/issues</url>
+  <author>Daniel Stonier</author>
+  <author>Alexandre Vincent</author>
+  <author>Kim Hyung Ryul Kim</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <rosdoc config="rosdoc.yaml"/>
+  </export>
+</package>
