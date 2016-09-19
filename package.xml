@@ -1,5 +1,5 @@
 <package format="2">
-  <name>gopher_robot_restful</name>
+  <name>catkin_restful</name>
   <version>0.2.0</version>
   <description>Restful API Specification for a gopher robot or simulation.</description>
   <maintainer email="stonier@yujinrobot.com">Daniel Stonier</maintainer>

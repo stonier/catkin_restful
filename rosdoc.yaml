@@ -1,2 +1,3 @@
 - builder: swagger
-  swagger_root_dir: docs
+  destination_directory: doc
+  #resources_directory: /opt/yujin/swagger-ui/gopher
